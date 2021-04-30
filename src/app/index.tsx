@@ -1,11 +1,15 @@
-import React from 'react';
+import React        from 'react';
+import View         from './pages/View';
+import { Provider } from 'react-redux';
 
-function App() {
+import store from './store';
+
+const App: React.FC = () => {
   return (
-    <>
-      Database documentation
-    </>
+    <Provider store={store}>
+      <View />
+    </Provider>
   );
-}
+};
 
 export default App;
